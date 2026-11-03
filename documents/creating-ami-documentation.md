@@ -46,7 +46,7 @@ Selected the instance → Stop → **Actions → Image and templates → Create 
 - Kept storage settings unchanged.
 - Clicked **Create image**.
 
-![image5.png](screenshots/image5.png)
+![image5.png](../screenshots/image5.png)
 **Evidence:** Screenshot of the AMI; wait until its status becomes **Available**.
 
 

@@ -50,7 +50,7 @@ MongoDB runs on a separate EC2 instance connected to the tic-tac-toe app, with s
   pm2 save
   ```
 - App showed Persistent with Mongo DB mode and successful scoreboard requests.
-![image6.png](screenshots/image6.png)
+![image6.png](../screenshots/image6.png)
 
 ## Restarting the setup
 - Start both EC2 instances, database first, then the app. MongoDB, PM2 and Nginx start automatically at boot.

@@ -23,14 +23,14 @@ Auto Scaling automatically adds or removes EC2 instances as demand changes. It h
 - Open **EC2 → Auto Scaling Groups → Create Auto Scaling group**.
 - Name the group and select the launch template.
 
-![img_15.png](screenshots/img_15.png)
+![img_15.png](../screenshots/img_15.png)
 ## 3. Choose instance launch options
 
 - Confirm the correct VPC.
 - Select suitable subnets across the three Availability Zones in `eu-west-1`. For this setup, use public subnets.
 - Keep the remaining settings at their defaults.
 
-![img_16.png](screenshots/img_16.png)
+![img_16.png](../screenshots/img_16.png)
 
 ## 4. Configure load balancing and health checks
 
@@ -40,9 +40,9 @@ Auto Scaling automatically adds or removes EC2 instances as demand changes. It h
 - Use an **HTTP listener on port 80**.
 - Enable **Elastic Load Balancing health checks** and set the grace period to **300 seconds**.
 
-![img_17.png](screenshots/img_17.png)
-![img_18.png](screenshots/img_18.png)
-![img_19.png](screenshots/img_19.png)
+![img_17.png](../screenshots/img_17.png)
+![img_18.png](../screenshots/img_18.png)
+![img_19.png](../screenshots/img_19.png)
 
 The ASG automatically registers new instances with the target group. The load balancer sends traffic to healthy instances.
 
@@ -61,14 +61,14 @@ Set the scaling policy:
 - **Target:** 50%
 - **Instance warmup:** 300 seconds
 - Leave **Disable scale in** unticked.
-![img_20.png](screenshots/img_20.png)
-![img_21.png](screenshots/img_21.png)
+![img_20.png](../screenshots/img_20.png)
+![img_21.png](../screenshots/img_21.png)
 ## 6. Notifications and tags
 
 - Skip notifications.
 - Add a `Name` tag, such as `thant-tictactoe-asg-instance`.
 - Enable **Tag new instances**, review the settings and create the group.
-![img_22.png](screenshots/img_22.png)
+![img_22.png](../screenshots/img_22.png)
 ## 7. Verify and test
 
 - Check **Activity** for successful launches and **Instance management** for two `InService` instances.
@@ -77,7 +77,7 @@ Set the scaling policy:
 
 **Replacement test:** I terminated one instance in the ASG. AWS launched a replacement to restore the desired capacity, and the new instance became healthy. This demonstrated automatic replacement, rather than CPU-based scaling.
 
-![img_23.png](screenshots/img_23.png)
+![img_23.png](../screenshots/img_23.png)
 
 To test demand-based scaling separately, generate sustained CPU load across the app instances and monitor the scaling policy and ASG activity. After the load stops, the group can return to its minimum of two instances.
 

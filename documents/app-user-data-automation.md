@@ -17,10 +17,10 @@ AWS resources may incur charges.
 
 ## Repository contents
 
-- `app/` — Node.js application source code and dependency files.
+- `../app` — Node.js application source code and dependency files.
 - `provision-app.sh` — automated deployment script.
-- `screenshots/` — screenshots showing the deployment stages.
-- `README.md` — deployment instructions.
+- `../screenshots` — screenshots showing the deployment stages.
+- `../README.md` — deployment instructions.
 
 ## What the script does
 
@@ -69,7 +69,7 @@ Configure the security group:
 
 *Note: In this case, just selected the existing secruity group*
 
-![alt text](screenshots/image.png)
+![alt text](../screenshots/image.png)
 
 ### 3. Add the User Data script
 
@@ -77,7 +77,7 @@ Open **Advanced details** and find **User data**.
 
 Copy the complete contents of `provision-app.sh` into the field, including the first line: 
 
-![alt text](screenshots/image1.png)
+![alt text](../screenshots/image1.png)
 
 Leave the base64-encoded option unchecked when pasting plain text.
 
@@ -99,7 +99,7 @@ Use HTTP, not HTTPS. Do not add `:3000`.
 
 The tic-tac-toe app should appear. Play a game to check that it responds.
 
-![alt text](screenshots/image4.png)
+![alt text](../screenshots/image4.png)
 
 ## Cleanup
 
