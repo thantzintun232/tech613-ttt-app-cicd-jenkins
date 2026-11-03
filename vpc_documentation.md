@@ -92,7 +92,14 @@ A Virtual Private Cloud is your own logically isolated private network inside AW
 | NAT | Lets private VMs reach the internet (not needed here because the AMIs are pre-built) |
 | Jump box | A public VM you SSH through to reach private VMs |
 
-## After it works
-- Post your app link in the chat.
-- Rebuild it a second time ("second VPC") with as little help as possible.
-- Document the steps and add them to your diagram. Explain why a custom VPC is worth the effort and what you troubleshot.
+## Why custom VPC is worth the effort?
+
+A custom VPC is worth the effort because it lets you design the network yourself instead of using the default VPC, where everything is public.
+
+- Security: the database sits in a private subnet with no public IP and no route to the internet.
+- Control: route tables and the internet gateway decide exactly where traffic flows.
+- Least access: the DB only accepts traffic from the app subnet, and the app only accepts SSH from you and HTTP from users.
+- Reliability: subnets in different availability zones keep the app running if one zone fails.
+- Cost: a VPC is free to leave running.
+
+**Trade-off:** more setup and more troubleshooting, but it’s easy to repeat once you understand it.
