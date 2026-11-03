@@ -19,15 +19,3 @@ Start with app deployment, then follow the AMI, MongoDB, monitoring and Auto Sca
 ## Tools used
 
 AWS EC2, AMIs, User Data, Auto Scaling Groups, Application Load Balancer, CloudWatch, SNS, Bash, Node.js, Nginx, PM2, MongoDB and ApacheBench.
-
-## Repository layout
-
-- `README.md` — repository homepage
-- `documents/app-user-data-automation.md` — app automation guide
-- `documents/creating-ami-documentation.md` — AMI guide
-- `documents/mongodb_deployment.md` — database setup guide
-- `documents/monitoring.md` — monitoring and alerts guide
-- `documents/autoscaling.md` — Auto Scaling and load balancing guide
-- `documents/vpc_documentation.md` — VPC setup guide
-- `documents/s3_notes.md` — S3 CLI and Boto3 guide
-- `images/` — screenshots used in the guides
