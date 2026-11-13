@@ -12,7 +12,7 @@ const X_MARKER_IMAGE_PATH = path.join(__dirname, 'public', 'images', 'x.png');
 const O_MARKER_IMAGE_PATH = path.join(__dirname, 'public', 'images', 'o.png');
 const PACKAGE_JSON_PATH = path.join(__dirname, 'package.json');
 const PACKAGE_METADATA = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, 'utf8'));
-const APP_VERSION = `v${PACKAGE_METADATA.version} - 13 Nov 2026 17:10`;
+const APP_VERSION = `v${PACKAGE_METADATA.version}`;
 let hasLoggedMissingMongoDriver = false;
 
 function isEnabledEnvToggle(value) {
@@ -97,7 +97,7 @@ function getMongoFallbackMessage(reason) {
 }
 
 function getFooterVersionStamp() {
-	const configuredTimestamp = String(process.env.APP_FOOTER_TIMESTAMP || '').trim();
+	const configuredTimestamp = String(process.env.APP_FOOTER_TIMESTAMP || '13/11/2026 17:30').trim();
 	return configuredTimestamp ? `${APP_VERSION} ${configuredTimestamp}` : APP_VERSION;
 }
 
